@@ -1,16 +1,15 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Import original sales data
+
 df = pd.read_csv("sales_data.csv")
 
-# Show first rows
+
 print(df.head())
 
-# Example analysis
 sales_by_category = df.groupby("Category")["Sales"].sum()
 
-# Chart
+
 sales_by_category.plot(kind="bar")
 
 plt.title("Sales Revenue Analysis")
